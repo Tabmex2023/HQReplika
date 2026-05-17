@@ -22,6 +22,12 @@
 
 }
 
+html{
+
+  scroll-behavior:smooth;
+
+}
+
 html,body{
 
   font-family:Arial,sans-serif;
@@ -88,7 +94,7 @@ html,body{
 
 }
 
-/* Abstand wegen Banner */
+/* Abstand */
 
 body{
 
@@ -96,7 +102,7 @@ body{
 
 }
 
-/* Oberer Bereich */
+/* Top Bereich */
 
 .top-section{
 
@@ -108,7 +114,7 @@ body{
 
   gap:60px;
 
-  padding:60px 20px;
+  padding:70px 20px;
 
   max-width:1300px;
 
@@ -127,6 +133,14 @@ body{
   border-radius:14px;
 
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+  transition:0.4s;
+
+}
+
+.top-logo img:hover{
+
+  transform:scale(1.03);
 
 }
 
@@ -182,13 +196,13 @@ body{
 
   text-align:center;
 
-  transition:0.3s;
+  transition:0.4s;
 
 }
 
 .category:hover{
 
-  transform:translateY(-5px);
+  transform:translateY(-8px);
 
 }
 
@@ -204,6 +218,14 @@ body{
 
   box-shadow:0 4px 14px rgba(0,0,0,0.08);
 
+  transition:0.4s;
+
+}
+
+.category img:hover{
+
+  transform:scale(1.03);
+
 }
 
 .category h3{
@@ -216,7 +238,7 @@ body{
 
 }
 
-/* Vertrauensbereich */
+/* Vertrauen */
 
 .trust-section{
 
@@ -268,13 +290,13 @@ body{
 
   box-shadow:0 4px 14px rgba(0,0,0,0.05);
 
-  transition:0.3s;
+  transition:0.4s;
 
 }
 
 .trust-box:hover{
 
-  transform:translateY(-4px);
+  transform:translateY(-8px);
 
 }
 
@@ -300,7 +322,7 @@ body{
 
 }
 
-/* WhatsApp Button */
+/* WhatsApp */
 
 .whatsapp-float{
 
@@ -326,11 +348,15 @@ body{
 
   box-shadow:0 4px 10px rgba(0,0,0,0.2);
 
+  transition:0.3s;
+
 }
 
 .whatsapp-float:hover{
 
   background:#1ebe5d;
+
+  transform:scale(1.05);
 
 }
 
@@ -359,6 +385,26 @@ footer a{
   color:#111;
 
   text-decoration:none;
+
+}
+
+/* Scroll Animation */
+
+.reveal{
+
+  opacity:0;
+
+  transform:translateY(70px);
+
+  transition:all 1s ease;
+
+}
+
+.reveal.active{
+
+  opacity:1;
+
+  transform:translateY(0);
 
 }
 
@@ -406,7 +452,7 @@ footer a{
 
 <!-- Logo + Text -->
 
-<section class="top-section">
+<section class="top-section reveal">
 
   <div class="top-logo">
 
@@ -434,7 +480,7 @@ footer a{
 
 <!-- Kategorien -->
 
-<section class="categories">
+<section class="categories reveal">
 
 <a href="kleidung.html" class="category">
 
@@ -472,7 +518,7 @@ footer a{
 
 <!-- Vertrauen -->
 
-<section class="trust-section">
+<section class="trust-section reveal">
 
 <h2>Service & Bestellung</h2>
 
@@ -550,7 +596,7 @@ WhatsApp Support
 
 <footer>
 
-<p>© 2026 HQReplika.com – Alle Rechte vorbehalten</p>
+<p>© 2026 HQRePLIKA.com – Alle Rechte vorbehalten</p>
 
 <p>
 
@@ -563,6 +609,38 @@ Kontakt via WhatsApp
 </p>
 
 </footer>
+
+<!-- Scroll Animation Script -->
+
+<script>
+
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+
+  const reveals = document.querySelectorAll('.reveal');
+
+  for(let i = 0; i < reveals.length; i++){
+
+    const windowHeight = window.innerHeight;
+
+    const revealTop = reveals[i].getBoundingClientRect().top;
+
+    const revealPoint = 100;
+
+    if(revealTop < windowHeight - revealPoint){
+
+      reveals[i].classList.add('active');
+
+    }
+
+  }
+
+}
+
+reveal();
+
+</script>
 
 </body>
 
