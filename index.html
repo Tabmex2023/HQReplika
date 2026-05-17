@@ -1,291 +1,457 @@
 <!DOCTYPE html>
+
 <html lang="de">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wichtige Mitteilung</title>
-  <style>
-    .banner-container {
-      width: 100%;
-      overflow: hidden;
-      background-color: #cc0000; /* kräftiges Rot */
-      color: white;
-      font-size: 1.1em;
-      font-family: Arial, sans-serif;
-      padding: 10px 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 9999;
-    }
 
-    .banner-text {
-      display: inline-block;
-      white-space: nowrap;
-      padding-left: 100%;
-      animation: scroll-left 15s linear infinite;
-    }
+<head>
 
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
+<meta charset="UTF-8">
 
-    body {
-      margin: 0;
-      padding-top: 50px; /* Abstand nach oben wegen fixiertem Banner */
-    }
-  </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HQReplika – Luxusmode</title>
+
+<style>
+
+*{
+
+  margin:0;
+
+  padding:0;
+
+  box-sizing:border-box;
+
+}
+
+html,body{
+
+  font-family:Arial,sans-serif;
+
+  background:#ffffff;
+
+  color:#222;
+
+  overflow-x:hidden;
+
+}
+
+/* Laufband oben */
+
+.banner-container{
+
+  width:100%;
+
+  overflow:hidden;
+
+  background:#cc0000;
+
+  color:white;
+
+  font-size:1rem;
+
+  padding:10px 0;
+
+  position:fixed;
+
+  top:0;
+
+  left:0;
+
+  z-index:9999;
+
+}
+
+.banner-text{
+
+  display:inline-block;
+
+  white-space:nowrap;
+
+  padding-left:100%;
+
+  animation:scroll-left 15s linear infinite;
+
+}
+
+@keyframes scroll-left{
+
+  0%{
+
+    transform:translateX(0%);
+
+  }
+
+  100%{
+
+    transform:translateX(-100%);
+
+  }
+
+}
+
+/* Logo Header */
+
+.logo-header{
+
+  width:100%;
+
+  background:white;
+
+  position:fixed;
+
+  top:42px;
+
+  left:0;
+
+  z-index:9998;
+
+  text-align:center;
+
+  padding:15px 0;
+
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+
+}
+
+.logo-header img{
+
+  max-width:220px;
+
+  width:90%;
+
+  height:auto;
+
+}
+
+/* Abstand wegen fixed Header */
+
+body{
+
+  padding-top:180px;
+
+}
+
+/* Hero */
+
+.hero{
+
+  text-align:center;
+
+  padding:40px 20px;
+
+}
+
+.hero h1{
+
+  font-size:2.4rem;
+
+  margin-bottom:20px;
+
+}
+
+.hero p{
+
+  max-width:900px;
+
+  margin:auto;
+
+  font-size:1.1rem;
+
+  line-height:1.7;
+
+  color:#444;
+
+}
+
+/* Kategorien */
+
+.categories{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  gap:35px;
+
+  padding:50px 20px;
+
+}
+
+.category{
+
+  width:280px;
+
+  text-decoration:none;
+
+  color:#222;
+
+  transition:0.3s;
+
+  text-align:center;
+
+}
+
+.category:hover{
+
+  transform:translateY(-5px);
+
+}
+
+.category img{
+
+  width:100%;
+
+  height:220px;
+
+  object-fit:cover;
+
+  border-radius:10px;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+.category h3{
+
+  margin-top:15px;
+
+  font-size:1.2rem;
+
+}
+
+/* WhatsApp */
+
+.whatsapp-float{
+
+  position:fixed;
+
+  right:20px;
+
+  bottom:20px;
+
+  background:#25D366;
+
+  color:white;
+
+  text-decoration:none;
+
+  padding:14px 22px;
+
+  border-radius:40px;
+
+  font-weight:bold;
+
+  z-index:9999;
+
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+
+}
+
+.whatsapp-float:hover{
+
+  background:#1ebe5d;
+
+}
+
+/* Info */
+
+.info{
+
+  padding:60px 20px;
+
+  text-align:center;
+
+}
+
+.info h2{
+
+  margin-bottom:20px;
+
+  font-size:2rem;
+
+}
+
+.info p{
+
+  max-width:850px;
+
+  margin:15px auto;
+
+  font-size:1.05rem;
+
+  line-height:1.7;
+
+  color:#444;
+
+}
+
+/* Footer */
+
+footer{
+
+  text-align:center;
+
+  padding:40px 20px;
+
+  background:#f7f7f7;
+
+  margin-top:40px;
+
+}
+
+footer a{
+
+  color:#222;
+
+  text-decoration:none;
+
+}
+
+</style>
+
 </head>
+
 <body>
+
+<!-- Laufband -->
+
+<div class="banner-container">
+
+  <div class="banner-text">
+
+    Schnell sein lohnt sich, Angebote jetzt solange der Vorrat reicht!
+
+  </div>
+
+</div>
+
+<!-- Logo -->
+
 <header class="logo-header">
 
   <img src="https://i.postimg.cc/gjrX8rrQ/ce9b9c11-cc51-4a2f-a5cb-72b89c2fb910.jpg" alt="HQReplika Logo">
 
 </header>
-  <div class="banner-container">
-    <div class="banner-text">
-      Schnell sein lohnt sich, Angebote jetzt solange der Vorrat reicht !
-    </div>
-  </div>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HQREPLIKA.de – 1:1 Luxusmode </title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      position: fixed; top: 0; width: 100%;
-      background: #ffffff;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 10px 40px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      z-index: 1000; height: 100px;
-    }
-    .logo img { height: 80px; }
-    nav ul { list-style: none; display: flex; gap: 30px; }
-    nav ul li { position: relative; }
-    nav a {
-      text-decoration: none; color: #222;
-      font-weight: 600; font-size: 1rem;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #777; }
-    .dropdown {
-      position: absolute; top: 100%; left: 0;
-      background: #fff; border: 1px solid #ddd;
-      display: none; flex-direction: column;
-      padding: 10px; min-width: 200px;
-      max-height: 300px; overflow-y: auto;
-      z-index: 1000;
-    }
-    nav ul li:hover .dropdown { display: flex; }
-    .dropdown a {
-      padding: 6px 12px; color: #222;
-      white-space: nowrap;
-    }
-    .dropdown a:hover { background-color: #f5f5f5; }
-    .hero {
-      padding: 140px 20px 60px; text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.8em; margin-bottom: 0.5em; font-weight: 600;
-    }
-    .hero p {
-      font-size: 1.2em; max-width: 800px;
-      margin: 0 auto; color: #444;
-    }
-    .categories {
-      display: flex; flex-wrap: wrap;
-      justify-content: center; gap: 40px;
-      padding: 60px 20px;
-    }
-    .category {
-      width: 300px; text-align: center;
-      text-decoration: none; color: #222;
-      transition: transform 0.3s;
-    }
-    .category img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-    .category:hover { transform: translateY(-5px); }
-    .category h3 {
-      font-size: 1.2em; font-weight: 600;
-    }
-    .info {
-      background-color: #ffffff; padding: 60px 20px;
-      text-align: center;
-    }
-    .info h2 {
-      font-size: 2em; margin-bottom: 20px;
-    }
-    .info p {
-      max-width: 850px; margin: 15px auto;
-      font-size: 1.1em; color: #333;
-    }
-    .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  z-index: 999;
-}
-.whatsapp-float:hover {
-  background: #1ebd5a;
-}
-    footer a {
-      color: #4ecdc4; text-decoration: none;
-      font-weight: 500;
-    }
-    footer a:hover { text-decoration: underline; }
-  </style>
-</head>
-<body>
 
-  <section class="hero">
-  <h1>Willkommen bei hqReplika.com</h1>
-  <p>Deine Agent für exklusive 1:1 Luxusmode, die besten Uhren und hochwertige Elektronik – direkt vom Hersteller, zu Preisen, die besser als jeder andere Agent sind. Alle Produkte sind in absoluter Premium-Qualität und nicht von den Originalen zu unterscheiden. Lieferzeit innerhalb Europa maximal 4 Werktage!</p>
+<!-- Hero -->
+
+<section class="hero">
+
+<h1>Willkommen bei HQReplika</h1>
+
+<p>
+
+Dein Agent für exklusive 1:1 Luxusmode, hochwertige Sneaker,
+
+Uhren, Taschen und Premium-Produkte direkt vom Hersteller.
+
+Beste Qualität zu Preisen, die besser sind als bei jedem anderen Agenten.
+
+Lieferung innerhalb Europas meist in wenigen Werktagen.
+
+</p>
+
 </section>
-  
+
+<!-- Kategorien -->
+
 <section class="categories">
-  
-  <a href="kleidung.html" class="category">
-    <img src="https://i.postimg.cc/zX1kST28/8-E4-B1-E0-E-C51-F-435-D-B6-B1-C44-A7543-D5-DB.png" alt="Kleidung">
-    <h3>KLEIDUNG</h3>
-  </a>
 
-  <a href="bag.html" class="category">
-    <img src="https://i.postimg.cc/Hsc51qwj/IMG-4933.jpg" alt="Taschen">
-    <h3>TASCHEN</h3>
-  </a>
+<a href="kleidung.html" class="category">
 
-  <a href="uhren.html" class="category">
-    <img src="https://i.postimg.cc/DzK5h6Pr/IMG-4913.png" alt="Uhren">
-    <h3>UHREN</h3>
-  </a>
-  
-  <a href="trikot.html" class="category">
-    <img src="https://i.postimg.cc/C1Dq8BKt/IMG-7856.jpg" alt="Trikots">
-    <h3>Trikots</h3>
-  </a>
+<img src="https://i.postimg.cc/zX1kST28/8-E4-B1-E0-E-C51-F-435-D-B6-B1-C44-A7543-D5-DB.png">
+
+<h3>KLEIDUNG</h3>
+
+</a>
+
+<a href="bag.html" class="category">
+
+<img src="https://i.postimg.cc/Hsc51qwj/IMG-4933.jpg">
+
+<h3>TASCHEN</h3>
+
+</a>
+
+<a href="uhren.html" class="category">
+
+<img src="https://i.postimg.cc/DzK5h6Pr/IMG-4913.png">
+
+<h3>UHREN</h3>
+
+</a>
+
+<a href="trikot.html" class="category">
+
+<img src="https://i.postimg.cc/C1Dq8BKt/IMG-7856.jpg">
+
+<h3>TRIKOTS</h3>
+
+</a>
 
 </section>
 
-<!-- Schuhe Kategorie (Slideshow mit Beschreibung) -->
-<section style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; padding: 60px 20px;">
-  <div style="flex: 1; min-width: 300px; max-width: 300px; position: relative;">
-    <div class="slideshow-container">
-      <img class="shoe-slide" src="https://i.postimg.cc/WpQG3xHp/IMG-4941.jpg" />
-      <img class="shoe-slide" src="https://i.postimg.cc/mg473C40/IMG-4942.jpg" />
-      <img class="shoe-slide" src="https://i.postimg.cc/rstw3n1Q/IMG-4943.jpg" />
-      <img class="shoe-slide" src="https://i.postimg.cc/GhGkszWF/IMG-4944.jpg" />
-      <img class="shoe-slide" src="https://i.postimg.cc/6qDyQJWk/IMG-4945.jpg" />
-      <img class="shoe-slide" src="https://i.postimg.cc/zB2y9H9X/IMG-4946.jpg" />
-      <img class="shoe-slide" src="https://i.postimg.cc/D0WSFyTQ/IMG-4947.jpg" />
-      <img class="shoe-slide" src="https://i.postimg.cc/4dxKLQ2S/IMG-4948.jpg" />
-      <img class="shoe-slide" src="https://i.postimg.cc/448vgmzc/IMG-4949.jpg" />
-      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-      <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    </div>
-  </div>
-  <div style="flex: 1; min-width: 280px; max-width: 500px;">
-    <h2 style="font-size: 1.8em; margin-bottom: 15px;">Exklusive Schuhe & Sneaker</h2>
-    <p style="font-size: 1.1em; color: #333; line-height: 1.6;">
-      Entdecke unsere Auswahl an hochwertigen Designer-Sneakern, Slides und Schuhen – alles in 1:1 Qualität mit voller Ausstattung.
-      <br><br>
-      Kontaktiere uns direkt via WhatsApp für Preise und Fragen!
-    </p>
-  </div>
+<!-- Infos -->
+
+<section class="info">
+
+<h2>So funktioniert deine Bestellung</h2>
+
+<p>
+
+Stöbere durch unsere Kategorien und sende uns deine Wunschprodukte ganz einfach per WhatsApp.
+
+</p>
+
+<p>
+
+Du erhältst anschließend alle Informationen zur Bestellung, Bezahlung und Lieferung direkt persönlich.
+
+</p>
+
+<p>
+
+Wir bieten ausschließlich Premium 1:1 Qualität mit maximalem Fokus auf Verarbeitung, Material und Details.
+
+</p>
+
+<p>
+
+Lieferung innerhalb Europas erfolgt meist innerhalb weniger Werktage.
+
+</p>
+
 </section>
 
-<style>
-  .shoe-slide {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    display: none;
-  }
-  .slideshow-container {
-    position: relative;
-    width: 300px;
-    height: 200px;
-  }
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    font-size: 2em;
-    color: #555;
-    padding: 0 10px;
-    cursor: pointer;
-    user-select: none;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.6);
-    border-radius: 5px;
-  }
-  .prev { left: 0; }
-  .next { right: 0; }
-</style>
+<!-- WhatsApp -->
 
-<script>
-  let slideIndex = 0;
-  const slides = document.getElementsByClassName("shoe-slide");
+<a href="https://wa.me/491636437385" class="whatsapp-float" target="_blank">
 
-  function showSlides() {
-    for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-    slideIndex++;
-    if (slideIndex > slides.length) slideIndex = 1;
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 1000);
-  }
+WhatsApp Support
 
-  function changeSlide(n) {
-    slideIndex += n - 1;
-    if (slideIndex < 0) slideIndex = slides.length - 1;
-    else if (slideIndex >= slides.length) slideIndex = 0;
-    for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-    slides[slideIndex].style.display = "block";
-  }
+</a>
 
-  window.onload = showSlides;
-</script>
-  <section class="info">
-  <h2>So funktioniert deine Bestellung</h2>
-  <p>Stöbere in unseren Kategorien und suche dir deine Wunschartikel aus. Notiere dir die Artikelnummern oder sende uns einen Screenshot.</p>
-  <p>Kontaktiere uns ganz einfach über Whatsapp – Dort wirst du persönlich auf Deutsch betreut.</p>
-  <p>Nach deiner Auswahl erhältst du alle Details zur Bezahlung sowie eine Bestellbestätigung. Wir kümmern uns um den Rest.</p>
-  <p>Jetzt kannst du dich entspannt zurücklehnen – dein Paket kommt sicher bei dir an. 📦</p>
-  <p><strong>Unsere Qualität:</strong> Wir bieten ausschließlich 1:1 Premium-Qualität – absolut identisch mit dem Original in Stoff, Schnitt und Details.</p>
-  <p><strong>Deine Sicherheit:</strong> Sollte einmal etwas nicht passen oder gefallen, kannst du den Artikel problemlos umtauschen – vorausgesetzt, er ist ungetragen und die Schilder sind nicht entfernt.</p>
-</section>
-  
-  <a href="https://wa.me/491636437385" class="whatsapp-float" target="_blank">WhatsApp Support</a>
+<!-- Footer -->
 
-  <footer>
-    <p>&copy; 2026 hqreplika.com – Alle Rechte vorbehalten</p>
-    <p>Kontakt via Whatsapp: <a href="https://wa.me/491636437385">@hqreplika.de</a></p>
-  </footer>
+<footer>
+
+<p>© 2026 HQReplika.com – Alle Rechte vorbehalten</p>
+
+<p>
+
+Kontakt:
+
+<a href="https://wa.me/491636437385">
+
+WhatsApp
+
+</a>
+
+</p>
+
+</footer>
+
 </body>
+
 </html>
