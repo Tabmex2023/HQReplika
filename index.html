@@ -88,75 +88,67 @@ html,body{
 
 }
 
-/* Logo Header */
-
-.logo-header{
-
-  width:100%;
-
-  background:white;
-
-  position:fixed;
-
-  top:42px;
-
-  left:0;
-
-  z-index:9998;
-
-  text-align:center;
-
-  padding:15px 0;
-
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
-
-}
-
-.logo-header img{
-
-  max-width:220px;
-
-  width:90%;
-
-  height:auto;
-
-}
-
-/* Abstand wegen fixed Header */
+/* Abstand wegen Banner */
 
 body{
 
-  padding-top:180px;
+  padding-top:60px;
 
 }
 
-/* Hero */
+/* Logo + Text */
 
-.hero{
+.top-section{
 
-  text-align:center;
+  display:flex;
 
-  padding:40px 20px;
+  align-items:center;
+
+  justify-content:center;
+
+  gap:50px;
+
+  padding:50px 20px;
+
+  max-width:1300px;
+
+  margin:auto;
+
+  flex-wrap:wrap;
 
 }
 
-.hero h1{
+.top-logo img{
 
-  font-size:2.4rem;
+  width:320px;
+
+  max-width:95%;
+
+  border-radius:12px;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+.top-text{
+
+  max-width:600px;
+
+}
+
+.top-text h1{
+
+  font-size:2.7rem;
 
   margin-bottom:20px;
 
 }
 
-.hero p{
-
-  max-width:900px;
-
-  margin:auto;
+.top-text p{
 
   font-size:1.1rem;
 
-  line-height:1.7;
+  line-height:1.8;
 
   color:#444;
 
@@ -220,6 +212,38 @@ body{
 
 }
 
+/* Info */
+
+.info{
+
+  padding:60px 20px;
+
+  text-align:center;
+
+}
+
+.info h2{
+
+  margin-bottom:20px;
+
+  font-size:2rem;
+
+}
+
+.info p{
+
+  max-width:850px;
+
+  margin:15px auto;
+
+  font-size:1.05rem;
+
+  line-height:1.7;
+
+  color:#444;
+
+}
+
 /* WhatsApp */
 
 .whatsapp-float{
@@ -254,38 +278,6 @@ body{
 
 }
 
-/* Info */
-
-.info{
-
-  padding:60px 20px;
-
-  text-align:center;
-
-}
-
-.info h2{
-
-  margin-bottom:20px;
-
-  font-size:2rem;
-
-}
-
-.info p{
-
-  max-width:850px;
-
-  margin:15px auto;
-
-  font-size:1.05rem;
-
-  line-height:1.7;
-
-  color:#444;
-
-}
-
 /* Footer */
 
 footer{
@@ -308,6 +300,30 @@ footer a{
 
 }
 
+/* Mobile */
+
+@media(max-width:768px){
+
+.top-section{
+
+  text-align:center;
+
+}
+
+.top-text h1{
+
+  font-size:2rem;
+
+}
+
+.top-logo img{
+
+  width:240px;
+
+}
+
+}
+
 </style>
 
 </head>
@@ -326,31 +342,33 @@ footer a{
 
 </div>
 
-<!-- Logo -->
+<!-- Logo + Text -->
 
-<header class="logo-header">
+<section class="top-section">
 
-  <img src="https://i.postimg.cc/gjrX8rrQ/ce9b9c11-cc51-4a2f-a5cb-72b89c2fb910.jpg" alt="HQReplika Logo">
+  <div class="top-logo">
 
-</header>
+    <img src="https://i.postimg.cc/gjrX8rrQ/ce9b9c11-cc51-4a2f-a5cb-72b89c2fb910.jpg" alt="HQReplika Logo">
 
-<!-- Hero -->
+  </div>
 
-<section class="hero">
+  <div class="top-text">
 
-<h1>Willkommen bei HQReplika</h1>
+    <h1>Willkommen bei HQReplika</h1>
 
-<p>
+    <p>
 
-Dein Agent für exklusive 1:1 Luxusmode, hochwertige Sneaker,
+      Dein Agent für exklusive 1:1 Luxusmode, hochwertige Sneaker,
 
-Uhren, Taschen und Premium-Produkte direkt vom Hersteller.
+      Uhren, Taschen und Premium-Produkte direkt vom Hersteller.
 
-Beste Qualität zu Preisen, die besser sind als bei jedem anderen Agenten.
+      Beste Qualität zu Preisen, die besser sind als bei jedem anderen Agenten.
 
-Lieferung innerhalb Europas meist in wenigen Werktagen.
+      Lieferung innerhalb Europas meist in wenigen Werktagen.
 
-</p>
+    </p>
+
+  </div>
 
 </section>
 
@@ -392,7 +410,7 @@ Lieferung innerhalb Europas meist in wenigen Werktagen.
 
 </section>
 
-<!-- Infos -->
+<!-- Info -->
 
 <section class="info">
 
@@ -440,11 +458,9 @@ WhatsApp Support
 
 <p>
 
-Kontakt:
-
 <a href="https://wa.me/491636437385">
 
-WhatsApp
+Kontakt via WhatsApp
 
 </a>
 
