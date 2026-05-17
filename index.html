@@ -34,7 +34,7 @@ html,body{
 
 }
 
-/* Laufband oben */
+/* Laufband */
 
 .banner-container{
 
@@ -42,7 +42,7 @@ html,body{
 
   overflow:hidden;
 
-  background:#cc0000;
+  background:#b30000;
 
   color:white;
 
@@ -96,7 +96,7 @@ body{
 
 }
 
-/* Logo + Text */
+/* Oberer Bereich */
 
 .top-section{
 
@@ -106,9 +106,9 @@ body{
 
   justify-content:center;
 
-  gap:50px;
+  gap:60px;
 
-  padding:50px 20px;
+  padding:60px 20px;
 
   max-width:1300px;
 
@@ -120,13 +120,13 @@ body{
 
 .top-logo img{
 
-  width:320px;
+  width:340px;
 
   max-width:95%;
 
-  border-radius:12px;
+  border-radius:14px;
 
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
 
 }
 
@@ -138,9 +138,11 @@ body{
 
 .top-text h1{
 
-  font-size:2.7rem;
+  font-size:2.8rem;
 
-  margin-bottom:20px;
+  margin-bottom:25px;
+
+  font-weight:600;
 
 }
 
@@ -148,7 +150,7 @@ body{
 
   font-size:1.1rem;
 
-  line-height:1.8;
+  line-height:1.9;
 
   color:#444;
 
@@ -178,9 +180,9 @@ body{
 
   color:#222;
 
-  transition:0.3s;
-
   text-align:center;
+
+  transition:0.3s;
 
 }
 
@@ -198,53 +200,107 @@ body{
 
   object-fit:cover;
 
-  border-radius:10px;
+  border-radius:12px;
 
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  box-shadow:0 4px 14px rgba(0,0,0,0.08);
 
 }
 
 .category h3{
 
-  margin-top:15px;
+  margin-top:18px;
 
-  font-size:1.2rem;
+  font-size:1.15rem;
+
+  font-weight:600;
 
 }
 
-/* Info */
+/* Vertrauensbereich */
 
-.info{
+.trust-section{
 
-  padding:60px 20px;
+  padding:90px 20px;
+
+  background:#f5f5f5;
 
   text-align:center;
 
 }
 
-.info h2{
+.trust-section h2{
 
-  margin-bottom:20px;
+  font-size:2.4rem;
 
-  font-size:2rem;
+  font-weight:600;
 
-}
+  margin-bottom:60px;
 
-.info p{
-
-  max-width:850px;
-
-  margin:15px auto;
-
-  font-size:1.05rem;
-
-  line-height:1.7;
-
-  color:#444;
+  letter-spacing:1px;
 
 }
 
-/* WhatsApp */
+.trust-boxes{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  gap:35px;
+
+  max-width:1300px;
+
+  margin:auto;
+
+}
+
+.trust-box{
+
+  background:#ffffff;
+
+  width:280px;
+
+  padding:35px 30px;
+
+  border-radius:14px;
+
+  box-shadow:0 4px 14px rgba(0,0,0,0.05);
+
+  transition:0.3s;
+
+}
+
+.trust-box:hover{
+
+  transform:translateY(-4px);
+
+}
+
+.trust-box h3{
+
+  font-size:1.2rem;
+
+  margin-bottom:18px;
+
+  font-weight:600;
+
+  color:#111;
+
+}
+
+.trust-box p{
+
+  font-size:1rem;
+
+  line-height:1.8;
+
+  color:#555;
+
+}
+
+/* WhatsApp Button */
 
 .whatsapp-float{
 
@@ -286,15 +342,21 @@ footer{
 
   padding:40px 20px;
 
-  background:#f7f7f7;
+  background:#ffffff;
 
-  margin-top:40px;
+}
+
+footer p{
+
+  margin:8px 0;
+
+  color:#555;
 
 }
 
 footer a{
 
-  color:#222;
+  color:#111;
 
   text-decoration:none;
 
@@ -318,7 +380,7 @@ footer a{
 
 .top-logo img{
 
-  width:240px;
+  width:250px;
 
 }
 
@@ -336,7 +398,7 @@ footer a{
 
   <div class="banner-text">
 
-   🏆 ⚽️ WM 2026 Paket - 10 WM Trikots nach Wahl 130€ inklusive Versand ⚽️ 🏆
+    Schnell sein lohnt sich, Angebote jetzt solange der Vorrat reicht.
 
   </div>
 
@@ -358,13 +420,11 @@ footer a{
 
     <p>
 
-      Dein Agent für exklusive 1:1 Luxusmode, hochwertige Sneaker,
+      Dein Ansprechpartner für exklusive 1:1 Luxusmode, hochwertige Sneaker,
 
-      Uhren, Taschen und Premium-Produkte direkt vom Hersteller.
+      Taschen, Uhren und ausgewählte Premium-Produkte direkt vom Hersteller.
 
-      Beste Qualität zu Preisen, die besser sind als bei jedem anderen Agenten.
-
-      Lieferung innerhalb Europas meist in wenigen Werktagen.
+      Höchste Qualität, professionelle Betreuung und schnelle Lieferung innerhalb Europas.
 
     </p>
 
@@ -378,7 +438,7 @@ footer a{
 
 <a href="kleidung.html" class="category">
 
-<img src="https://i.postimg.cc/zX1kST28/8-E4-B1-E0-E-C51-F-435-D-B6-B1-C44-A7543-D5-DB.png">
+<img src="https://i.postimg.cc/zX1kST28/8-E4-B1-E0-E-C51-F-435-D-B6-B1-C44-A7543-D5-DB.png" alt="Kleidung">
 
 <h3>KLEIDUNG</h3>
 
@@ -386,7 +446,7 @@ footer a{
 
 <a href="bag.html" class="category">
 
-<img src="https://i.postimg.cc/Hsc51qwj/IMG-4933.jpg">
+<img src="https://i.postimg.cc/Hsc51qwj/IMG-4933.jpg" alt="Taschen">
 
 <h3>TASCHEN</h3>
 
@@ -394,7 +454,7 @@ footer a{
 
 <a href="uhren.html" class="category">
 
-<img src="https://i.postimg.cc/DzK5h6Pr/IMG-4913.png">
+<img src="https://i.postimg.cc/DzK5h6Pr/IMG-4913.png" alt="Uhren">
 
 <h3>UHREN</h3>
 
@@ -402,7 +462,7 @@ footer a{
 
 <a href="trikot.html" class="category">
 
-<img src="https://i.postimg.cc/C1Dq8BKt/IMG-7856.jpg">
+<img src="https://i.postimg.cc/C1Dq8BKt/IMG-7856.jpg" alt="Trikots">
 
 <h3>TRIKOTS</h3>
 
@@ -410,35 +470,71 @@ footer a{
 
 </section>
 
-<!-- Info -->
+<!-- Vertrauen -->
 
-<section class="info">
+<section class="trust-section">
 
-<h2>So funktioniert deine Bestellung</h2>
+<h2>Service & Bestellung</h2>
 
-<p>
+<div class="trust-boxes">
 
-Stöbere durch unsere Kategorien und sende uns deine Wunschprodukte ganz einfach per WhatsApp.
+<div class="trust-box">
 
-</p>
-
-<p>
-
-Du erhältst anschließend alle Informationen zur Bestellung, Bezahlung und Lieferung direkt persönlich.
-
-</p>
+<h3>Persönlicher Kundenservice</h3>
 
 <p>
 
-Wir bieten ausschließlich Premium 1:1 Qualität mit maximalem Fokus auf Verarbeitung, Material und Details.
+Alle Anfragen werden direkt und persönlich über WhatsApp bearbeitet.
+
+Wir beraten individuell zu Produkten, Größen, Verfügbarkeit und Lieferung.
 
 </p>
+
+</div>
+
+<div class="trust-box">
+
+<h3>Sichere Zahlungsmöglichkeiten</h3>
 
 <p>
 
-Lieferung innerhalb Europas erfolgt meist innerhalb weniger Werktage.
+Für unsere Kunden stehen verschiedene Zahlungsmethoden zur Verfügung.
+
+Alle Zahlungsinformationen werden transparent vor Abschluss der Bestellung mitgeteilt.
 
 </p>
+
+</div>
+
+<div class="trust-box">
+
+<h3>Vertrauen & Qualität</h3>
+
+<p>
+
+Diskretion, Zuverlässigkeit und höchste Produktqualität stehen bei uns im Mittelpunkt.
+
+Jede Bestellung wird sorgfältig geprüft und professionell bearbeitet.
+
+</p>
+
+</div>
+
+<div class="trust-box">
+
+<h3>Schneller Versand innerhalb Europas</h3>
+
+<p>
+
+Unsere Lieferungen erfolgen zuverlässig und schnell innerhalb Europas.
+
+Die meisten Bestellungen erreichen unsere Kunden innerhalb weniger Werktage.
+
+</p>
+
+</div>
+
+</div>
 
 </section>
 
